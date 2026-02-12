@@ -19,6 +19,17 @@ const assignments = [
       "folder expand/collapse state",
     ],
   },
+  {
+    id: "05",
+    title: "Users Data Grid",
+    path: "/users-data-grid",
+    level: "Advanced",
+    goals: [
+      "data grid rendering",
+      "sorting and filtering",
+      "pagination",
+    ],
+  },
 ];
 
 export const AssignmentsPage = () => {
