@@ -33,9 +33,68 @@ h1 {
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.assignment-item:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.assignment-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
   padding: 1rem;
 }
 
 .assignment-item h3 {
   margin: 0;
+}
+
+.assignment-goals-label {
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 600;
+}
+
+.file-system-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tree-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tree-node {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tree-node:hover {
+  background: #f1f5f9;
+}
+
+.tree-node.file {
+  cursor: default;
+}
+
+.tree-node-icon {
+  width: 2.2rem;
+  color: #475569;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
