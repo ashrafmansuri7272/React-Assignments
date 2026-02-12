@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TodoItem } from "./TodoItem";
-
+import { Link } from "react-router-dom";
 export const Todo = () => {
     const [todo, setTodo] = useState("");
     const [todos, setTodos] = useState([]);
@@ -43,6 +43,7 @@ export const Todo = () => {
             {
                 filteredTodos.map(todo => <TodoItem key={todo.id} item={todo} toggleTodo={toggleTodo} updateTodo={updateTodo} deleteTodo={deleteTodo} />)
             }
+        <Link to="/">Back to Assignments</Link>
         </div>
     );
 }
