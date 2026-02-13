@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const assignments = [
   {
     id: "02",
@@ -33,18 +34,18 @@ const assignments = [
 ];
 
 export const AssignmentsPage = () => {
-    return <main className="container">
+  return <main className="container">
     <h1>Assignments</h1>
     <div className="assignment-list">
       {assignments.map(({ id, title, level, path, goals }) => (
         <Link key={id} to={path} className="assignment-card-link assignment-item">
-            <h2>{id}. {title}</h2>
-            <p>{level}</p>
-              {goals.map((goal, index) => (
-                <p key={index} >{goal}</p>
-              ))}
+          <h2>{id} {title}</h2>
+          <p className="assignment-level-label">{level}</p>
+          {goals.map((goal, index) => (
+            <p key={index} className="assignment-goals-label">{goal}</p>
+          ))}
         </Link>
       ))}
-      </div>
-    </main>
+    </div>
+  </main>
 }
