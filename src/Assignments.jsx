@@ -31,6 +31,17 @@ const assignments = [
       "pagination",
     ],
   },
+  {
+    id: "06",
+    title: "Dashboard with Authentication",
+    path: "/dashboard",
+    level: "Advanced",
+    goals: [
+      "protected routes",
+      "context for auth state",
+      "integration with Firebase Auth",
+    ],
+  },
 ];
 
 export const AssignmentsPage = () => {
