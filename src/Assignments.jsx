@@ -42,6 +42,17 @@ const assignments = [
       "integration with Firebase Auth",
     ],
   },
+  {
+    id: "07",
+    title: "Autocomplete Component",
+    path: "/autocomplete",
+    level: "Intermediate",
+    goals: [
+      "fetching data from an API",
+      "debouncing user input",
+      "rendering suggestions",
+    ],
+  },
 ];
 
 export const AssignmentsPage = () => {

@@ -7,6 +7,7 @@ import { UserTable } from "./UserTable";
 import Dashboard from "./Dashboard";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { Login } from "./Login";
+import { Autocomplete } from "./Autocomplete";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         </ProtectedRoute>
       } />
       <Route path="/login" element={<Login />} />
+      <Route path="/autocomplete" element={<Autocomplete />} />
     </Routes>
   )
 }
