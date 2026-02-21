@@ -4,9 +4,11 @@ import { auth } from "../firebase";
 import { useContext } from "react";
 import AuthContext from "./context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { ToastContext } from "./context/ToastContext";
 
 export function Login() {
   const { user } = useContext(AuthContext);
+  const { showToast } = useContext(ToastContext);
   const navigate = useNavigate();
   const handleLogin = async () => {
     const provider = new GoogleAuthProvider();
@@ -16,6 +18,7 @@ export function Login() {
   useEffect(() => {
     if (user) {
       navigate("/dashboard");
+      showToast({ type: "success", message: "Logged in successfully!" });
     }
   }, [user, navigate]);
 
