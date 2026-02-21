@@ -8,7 +8,6 @@ export const ToastProvider = ({ children }) => {
 
     const showToast = ({ type, message }) => {
         const id = Date.now();
-        console.log("Adding toast:", { id, type, message });
         setToasts(prev => [...prev, { id, type, message }]);
     }
 
