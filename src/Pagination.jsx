@@ -1,7 +1,6 @@
 import React from "react";
 
 export const Pagination = ({ currentPage, totalPages, setCurrentPage }) => {
-    console.log("totalPages", totalPages);
     return (<div>
         <button onClick={()=> setCurrentPage(prev=> Math.max(1, prev-1))} disabled={currentPage === 1}>Prev</button>
         <span>Page {currentPage} of {totalPages}</span>

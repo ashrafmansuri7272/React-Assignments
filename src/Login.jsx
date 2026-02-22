@@ -2,9 +2,9 @@ import React, { use, useEffect } from "react";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase";
 import { useContext } from "react";
-import AuthContext from "./context/AuthContext";
+import AuthContext from "./context/AuthProvider.jsx";
 import { useNavigate } from "react-router-dom";
-import { ToastContext } from "./context/ToastContext";
+import { ToastContext } from "./context/ToastProvider.jsx";
 
 export function Login() {
   const { user } = useContext(AuthContext);

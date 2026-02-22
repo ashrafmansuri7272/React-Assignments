@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useContext } from 'react';
-import { ToastContext } from './context/ToastContext.jsx';
+import { ToastContext } from './context/ToastProvider.jsx';
 import { ToastItem } from './ToastItem.jsx';
 import { createPortal } from 'react-dom';
 
