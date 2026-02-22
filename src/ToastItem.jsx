@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { ToastContext } from "./context/ToastContext.jsx";
+import { ToastContext } from "./context/ToastProvider.jsx";
 export const ToastItem = ({ id, type, message }) => {
 
     const { removeToast } = useContext(ToastContext);

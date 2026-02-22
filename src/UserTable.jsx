@@ -3,11 +3,12 @@ import { useFetch } from "./hooks/useFetch";
 import { Link } from "react-router-dom";
 import { Pagination } from "./Pagination";
 import { useDebounce } from "./hooks/useDebounce";
-
+import { useModal } from "./hooks/useModal";
 export const UserTable = () => {
     const { users: {users}, loading, error } = useFetch("https://dummyjson.com/users");
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState("");
+    const {openModal, closeModal} = useModal();
     const debouncedValue = useDebounce(searchTerm, 1000);
     const totalPages = Math.ceil(users?.length / 5);
 
@@ -41,6 +42,7 @@ export const UserTable = () => {
                 </tbody>
             </table>
             <Pagination currentPage={currentPage} totalPages={totalPages} setCurrentPage={setCurrentPage} />
+            <div style={{ marginTop: "20px" }}> OpenModal: <button onClick={() => openModal("User Info", "This is some user information")}>Open Modal</button> </div>
             <Link to="/" className="back-link">Back to Assignments</Link>
         </div>
     )
