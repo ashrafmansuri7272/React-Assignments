@@ -23,17 +23,18 @@ h1 {
 }
 
 .assignment-list {
-  list-style: none;
-  padding: 0;
   display: grid;
-  gap: 1rem;
+  grid-template-rows: repeat(4, auto); /* 4 rows per column */
+  grid-auto-flow: column; /* fill column first */
+  gap: 4px;
 }
 
 .assignment-item {
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .assignment-item:hover {

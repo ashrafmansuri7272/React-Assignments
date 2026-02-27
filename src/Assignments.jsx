@@ -6,8 +6,8 @@ const assignments = [
     id: "02",
     title: "To-do List",
     path: "/todo",
-    level: "Beginner+",
-    goals: ["list rendering", "forms", "state updates"],
+    level: "Beginner",
+    goals: ["list rendering", "form handling", "basic state updates"],
   },
   {
     id: "04",
@@ -16,19 +16,19 @@ const assignments = [
     level: "Intermediate",
     goals: [
       "recursive component rendering",
-      "nested data structure traversal",
-      "folder expand/collapse state",
+      "nested data traversal",
+      "expand and collapse state management",
     ],
   },
   {
     id: "05",
     title: "Users Data Grid",
     path: "/users-data-grid",
-    level: "Advanced",
+    level: "Intermediate+",
     goals: [
-      "data grid rendering",
+      "tabular data rendering",
       "sorting and filtering",
-      "pagination",
+      "client-side pagination",
     ],
   },
   {
@@ -37,9 +37,9 @@ const assignments = [
     path: "/dashboard",
     level: "Advanced",
     goals: [
+      "authentication flow",
       "protected routes",
-      "context for auth state",
-      "integration with Firebase Auth",
+      "global auth state management",
     ],
   },
   {
@@ -48,26 +48,48 @@ const assignments = [
     path: "/autocomplete",
     level: "Intermediate",
     goals: [
-      "fetching data from an API",
-      "debouncing user input",
-      "rendering suggestions",
+      "API-driven suggestions",
+      "debounced input handling",
+      "dynamic list rendering",
+    ],
+  },
+  {
+    id: "08",
+    title: "Infinite Products",
+    path: "/infinite-products",
+    level: "Intermediate",
+    goals: [
+      "infinite scrolling",
+      "paginated data fetching",
+      "loading and end-state handling",
+      "DATA LOADING",
     ],
   },
 ];
 
 export const AssignmentsPage = () => {
-  return <main className="container">
-    <h1>Assignments</h1>
-    <div className="assignment-list">
-      {assignments.map(({ id, title, level, path, goals }) => (
-        <Link key={id} to={path} className="assignment-card-link assignment-item">
-          <h2>{id} {title}</h2>
-          <p className="assignment-level-label">{level}</p>
-          {goals.map((goal, index) => (
-            <p key={index} className="assignment-goals-label">{goal}</p>
-          ))}
-        </Link>
-      ))}
-    </div>
-  </main>
-}
+  return (
+    <main className="container">
+      <h1>Assignments</h1>
+      <div className="assignment-list">
+        {assignments.map(({ id, title, level, path, goals }) => (
+          <Link
+            key={id}
+            to={path}
+            className="assignment-card-link assignment-item"
+          >
+            <h2>
+              {id} {title}
+            </h2>
+            <p className="assignment-level-label">{level}</p>
+            {goals.map((goal, index) => (
+              <p key={index} className="assignment-goals-label">
+                {goal}
+              </p>
+            ))}
+          </Link>
+        ))}
+      </div>
+    </main>
+  );
+};

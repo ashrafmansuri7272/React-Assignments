@@ -8,7 +8,7 @@ import Dashboard from "./Dashboard";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { Login } from "./Login";
 import { Autocomplete } from "./Autocomplete";
-
+import {InfiniteProducts} from "./InfiniteProducts"
 export default function App() {
   return (
     <Routes>
@@ -23,6 +23,7 @@ export default function App() {
       } />
       <Route path="/login" element={<Login />} />
       <Route path="/autocomplete" element={<Autocomplete />} />
+      <Route path="/infinite-products" element={<InfiniteProducts />} />
     </Routes>
   )
 }
