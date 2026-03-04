@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 
 const assignments = [
   {
+    id: "01",
+    title: "Virtualized List",
+    path: "/virtualized-list",
+    level: "Beginner",
+    goals: [""],
+  },
+  {
     id: "02",
     title: "To-do List",
     path: "/todo",
