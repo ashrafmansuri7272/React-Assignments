@@ -7,7 +7,11 @@ const assignments = [
     title: "Virtualized List",
     path: "/virtualized-list",
     level: "Beginner",
-    goals: [""],
+    goals: [
+      "virtualized rendering",
+      "conditional rendering",
+      "scroll performance optimization",
+    ],
   },
   {
     id: "02",

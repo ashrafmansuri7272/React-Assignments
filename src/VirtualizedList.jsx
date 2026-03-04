@@ -23,7 +23,12 @@ export const Virtualizedlist = () => {
       }}
       onScroll={(e) => setScrollTop(e.target.scrollTop)}
     >
-      <div style={{ height: `${ITEM_HEIGHT * products.length}px` }}>
+      <div
+        style={{
+          height: `${ITEM_HEIGHT * products.length}px`,
+          position: "relative",
+        }}
+      >
         <div
           style={{
             transform: `translateY(${startIndex * ITEM_HEIGHT}px)`,
@@ -31,7 +36,10 @@ export const Virtualizedlist = () => {
         >
           {payload.length > 0 &&
             payload.map((item) => (
-              <p key={item.id} style={{ height: `${ITEM_HEIGHT}px` }}>
+              <p
+                key={item.id}
+                style={{ height: `${ITEM_HEIGHT}px`, margin: 0 }}
+              >
                 {item.title}
               </p>
             ))}
