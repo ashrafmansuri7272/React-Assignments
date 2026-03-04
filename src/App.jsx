@@ -8,7 +8,8 @@ import Dashboard from "./Dashboard";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { Login } from "./Login";
 import { Autocomplete } from "./Autocomplete";
-import {InfiniteProducts} from "./InfiniteProducts"
+import { InfiniteProducts } from "./InfiniteProducts";
+import { Virtualizedlist } from "./VirtualizedList";
 export default function App() {
   return (
     <Routes>
@@ -16,14 +17,18 @@ export default function App() {
       <Route path="/todo" element={<Todo />} />
       <Route path="/file-system" element={<FileSystemAssignment />} />
       <Route path="/users-data-grid" element={<UserTable />} />
-      <Route path="/dashboard" element={
-        <ProtectedRoute>
-          <Dashboard />
-        </ProtectedRoute>
-      } />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
       <Route path="/login" element={<Login />} />
       <Route path="/autocomplete" element={<Autocomplete />} />
       <Route path="/infinite-products" element={<InfiniteProducts />} />
+      <Route path="/virtualized-list" element={<Virtualizedlist />} />
     </Routes>
-  )
+  );
 }
