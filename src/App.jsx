@@ -10,6 +10,7 @@ import { Login } from "./Login";
 import { Autocomplete } from "./Autocomplete";
 import { InfiniteProducts } from "./InfiniteProducts";
 import { Virtualizedlist } from "./VirtualizedList";
+import { Stopwatch } from "./Stopwatch";
 export default function App() {
   return (
     <Routes>
@@ -29,6 +30,7 @@ export default function App() {
       <Route path="/autocomplete" element={<Autocomplete />} />
       <Route path="/infinite-products" element={<InfiniteProducts />} />
       <Route path="/virtualized-list" element={<Virtualizedlist />} />
+      <Route path="/stopwatch" element={<Stopwatch />} />
     </Routes>
   );
 }

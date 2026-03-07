@@ -76,6 +76,13 @@ const assignments = [
       "DATA LOADING",
     ],
   },
+  {
+    id: "09",
+    title: "Stopwatch",
+    path: "/stopwatch",
+    level: "Beginner",
+    goals: ["useState", "useEffect", "useRef", "event handling"],
+  },
 ];
 
 export const AssignmentsPage = () => {
